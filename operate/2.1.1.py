@@ -1,20 +1,20 @@
 import pandas as pd
 
 # 加载数据集并显示数据集的前五行 1分
-data = #填充
+data = pd.read_csv('doc/1.1.1答案/patient_data.csv')#填充
 print("数据集的前五行:")
-print #填充
+print(data.head()) #填充
 
 # 显示每一列的数据类型
 print(data.dtypes)
 
 # 检查缺失值并删除缺失值所在的行  2分
 print("\n检查缺失值:")
-print #填充
-data = #填充
+print(data.isnull()) #填充
+data = data.drop_duplicates(inplace=True) #填充
 
 # 将 'horsepower' 列转换为数值类型，并处理转换中的异常值 1分
-data['horsepower'] = #填充(data['horsepower'], errors='coerce')
+data['horsepower'] = (data['horsepower'], errors='coerce')#填充(data['horsepower'], errors='coerce')
 data = #填充
 
 # 显示每一列的数据类型
